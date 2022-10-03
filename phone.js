@@ -3,7 +3,6 @@ function inputUpdate(isIncrease) {
     const inputFieldString = inputFieldSelect.value;
     const inputFieldNumber = parseInt(inputFieldString);
 
-
     let increaseNumber;
 
     if (isIncrease === true) {
@@ -23,21 +22,24 @@ function priceUpdate(increasePrice) {
 
     const phonePriceGet = document.getElementById('phone-price');
     phonePriceGet.innerText = totalPhonePrice;
-
 }
+
 
 document.getElementById('increase-btn').addEventListener('click', function () {
     const increasePrice = inputUpdate(true);
 
-    priceUpdate(increasePrice)
+    priceUpdate(increasePrice);
 
+    calculateSubTotal()
 
 })
+
 
 document.getElementById('decrees-btn').addEventListener('click', function () {
     const increasePrice = inputUpdate(false);
 
-    priceUpdate(increasePrice)
 
+    priceUpdate(increasePrice);
 
+    calculateSubTotal()
 })

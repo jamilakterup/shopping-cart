@@ -21,16 +21,15 @@ function totalPriceUpdate(totalPrice) {
     const casePriceIncrease = document.getElementById('case-price');
     casePriceIncrease.innerText = price;
 
-
-
 }
+
 
 document.getElementById('increase-case-btn').addEventListener('click', function () {
     const totalPrice = NumberUpdate(true);
 
     totalPriceUpdate(totalPrice);
 
-
+    calculateSubTotal()
 })
 
 document.getElementById('decrees-case-btn').addEventListener('click', function () {
@@ -38,5 +37,5 @@ document.getElementById('decrees-case-btn').addEventListener('click', function (
 
     totalPriceUpdate(totalPrice);
 
-
+    calculateSubTotal()
 })
